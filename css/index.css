@@ -1,0 +1,16 @@
+body h1{
+    font-family: 'Times New Roman', Times, serif;
+     color: blueviolet;
+}
+body p{
+    font-family: 'Times New Roman', Times, serif;
+color: peachpuff;
+}
+body ol{
+    font-family: 'Times New Roman', Times, serif;
+    color: green;
+}
+body{
+    background-image:src(/img/images.jpg);
+}
+
