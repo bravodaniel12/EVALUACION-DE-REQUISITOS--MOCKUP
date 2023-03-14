@@ -1,0 +1,15 @@
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: gray;
+    
+}
+body p{
+    font-family: 'Times New Roman', Times, serif;
+    align-items: top;
+    margin: 50px;
+    width:400px;
+}
+body h1{
+  font-size: 1.8em;  
+}
