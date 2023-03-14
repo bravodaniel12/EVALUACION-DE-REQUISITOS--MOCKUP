@@ -1,5 +1,5 @@
 *{
-    margin: 3;
+    margin: 0;
     padding: 0;
 }
 body h1{
@@ -7,33 +7,43 @@ body h1{
      color: white;
      display: flex;
     justify-content: center; 
+    font-family: fuenteadd;
 
 }
 body p{
     font-size: 1.5em;
     font-family: 'Times New Roman', Times, serif;
-color: rgb(0, 128, 128);
+color: white;
 display: flex;
 justify-content: center;
+font-family: fuenteadd;
 }
 body ol{
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(0, 128, 128);
+    color: goldenrod;
     display: flex;
     justify-content: center;
+    font-family: fuenteadd;
+    font-size: 21px;
 }
 
 body{
     justify-items: center;
     background-color: #100420;
-    margin-left: 80px;
-    height: 100px;
+    margin-left: 50px;
+    height: 900px;
 
+   
 }
 .imagen{
-    width: 300px;
+width: 400px;
 height: 200px;
 display: flex;
-flex-direction: column;
+size: cover;
 margin-left: 480px;
+margin: 0 auto;  /* para que se centre sin necesidad de margin-position */
+}
+@font-face {
+    font-family: fuenteadd;/* se coloca el nombre q quiera */
+    src: url(../fonts/Sketching\ Universe.otf);
 }
