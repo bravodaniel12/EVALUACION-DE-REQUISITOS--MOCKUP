@@ -1,3 +1,13 @@
+.boton{
+    color: red;
+    font-size: 1.6em;
+    font-weight: 900px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+align-items: center;
+}
 .boton1{
     list-style: none;/* para quitar el boton al inicio de los link */
     display: inline-block;
@@ -14,6 +24,7 @@
     box-shadow: 0 9px #beb2b2;
 margin-right: 15px;
 }
+
 .boton2{
     list-style: none;/* para quitar el boton al inicio de los link */
     display: inline-block;
