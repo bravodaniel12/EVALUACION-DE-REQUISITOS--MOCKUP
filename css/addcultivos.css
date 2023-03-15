@@ -1,6 +1,6 @@
 *{
-    margin: 100;
-    padding: 1;
+    margin: 0%;
+    padding: 0%;
     /* en este caso no esta ejerciendo ninguna funcion, pero lo deje por si acaso */
 }
 body{
@@ -11,8 +11,8 @@ font-size: larger;
 }
 
 .imagen{
-    margin-left: 500px;
-    width: 450px;
+    margin-left: 400px;
+    width: 350px;
     height: 320px;
     display: flex;
     flex-direction: column;

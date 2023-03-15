@@ -1,0 +1,9 @@
+p{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    margin: 600px;
+    width: 620px;
+  text-align: center;
+    }
