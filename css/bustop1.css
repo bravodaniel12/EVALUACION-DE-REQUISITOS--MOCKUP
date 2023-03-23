@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    margin-top: 80px;
+    font-family: game;
+}
+
+p{
+    text-align: center;
+    font-family: game;
+}
+
+/* aqui va el logo de busstop */
+
+body{
+    text-align: center;
+    font-size: 30px;
+    background-image: url(../img/juego.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: game ;
+    src: url(../fonts/Doctor\ Glitch.otf);
+  }
