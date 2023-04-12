@@ -12,15 +12,30 @@
     <h1>FORMATO DE FICHA TECNICA</h1>
     <H3> caracteristicas del producto</H3>
 
-<input type="text" id="nom_producto" placeholder="nombre del producto"><!-- el placeholder sirve para poner un sub mensaje de ayuda -->
-<p>
-    <button onclick="getficha() ,getlinea()">enviar</button>
-    <!-- onclick sirve para que serealize la tarea al precionarlo ej: enviar -->
-</p>
+<input type="text" id="nom_producto" placeholder="nombre del producto"> <!-- el placeholder sirve para poner un sub mensaje de ayuda -->
 <p id="res-producto"</p>
 
     <h1>FICHA DE PRODUCCION</h1>
-    <input type="text" id="li-producto" placeholder="nombre de producto">
-    <p1 id="lo-producto"</p1>
+
+    <input type="text" id="li_producto" placeholder="nombre de producto">
+    <p id="lo-producto"></p>
+
+        <h1>VERSIONES ANTERIORES</h1>
+
+    <input type="text" id="te_producto" placeholder="nombre de la version">
+    <p id="to-producto"></p>
+
+        <h1>VERSION ACTUAL</h1>
+    <input type="text" id="pi_producto" placeholder="nombre de la version">
+    <p id="tu-producto"></p>
+
+        <h1>MODULO</h1>
+    <input type="text" id="cu_producto" placeholder="nombre del modulo">
+    <p id="ca-producto"</p>
+
+        <p>
+            <button onclick="getficha() ,getlinea() ,getterior() ,getctual() ,getmodulo()">enviar</button>
+            <!-- onclick sirve para que serealize la tarea al precionarlo ej: enviar -->
+        </p>
 </body
 </html>
