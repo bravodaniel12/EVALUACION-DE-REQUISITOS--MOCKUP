@@ -1,0 +1,26 @@
+*{ 
+margin: 0;
+}
+h1{
+    text-align: center;
+}
+body{
+    background:linear-gradient(tomato, orange ) ;/* linear gradi... sirve para agregar otro color en el fondo y va acompañado de  */
+    width: 100vh;
+    height: 100vh;
+}
+input{
+    width: 260px;
+    height: 30px;
+}
+button{
+    padding: 13px 20px;/* padding son las margenes del boton */
+    margin: 20px 10px 20px 10px;
+    margin-top: 30px;
+    font-size: 15px; /* sirve para hacer crecer la letra */
+   /*  display: flex; */
+    color: brown;
+    border-bottom-left-radius: 10px;
+   border-color:darkred;
+
+}
