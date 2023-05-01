@@ -1,0 +1,21 @@
+body {
+    background-image: url(../img/img33.avif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+h1{
+    text-align: center;
+    margin-top: 80px;
+    font-family: game;
+}
+.img{
+    display: flex;
+    size: cover;
+    margin-left: 480px;
+    margin: 0 auto;  /* para que se centre sin necesidad de margin-position */
+}

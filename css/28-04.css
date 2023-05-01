@@ -4,7 +4,7 @@
 body {
     background: linear-gradient(	PapayaWhip,tomato);
     width: 100%;
-    height: 100vh;
+    height: 120vh; /* sirve para alargar lahoja dela pagina */
 }
 input {
     list-style: none; /*Para quitar el boton de inicio en los link*/
@@ -64,9 +64,9 @@ button{
     position: relative;
     left: 500px;
     width: 80px;
-    height: 30px;
+    height: 35px;
    padding: 1px;
-    margin: 30PX;
+    margin: 10PX;
     text-align: center;
     align-items: center;
     color:black ;
