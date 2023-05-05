@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de localstorege</title> 
+    <script defer src="js/localstoras.js"></script>
+    <style>
+        body{
+            text-align: center;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <h1> local </h1>
+    <input type="text" id="nombre" placeholder="Nombre"><br><br>
+    <input type="text" id="apellido" placeholder="Apellido"><br><br>
+    <input type="text" id="correo" placeholder="Correo">
+    <input type="date" id="fnacimiento" placeholder="Fecha"><br><br>
+    
+    
+    
+    
+    <button onclick="almacenarData()"> Guardar</button>
+    <hr>
+    <p>Nombre almacenado: <j id="datoNombre"> </j></p>
+    <p>Apellido almacenado: <j id="datoApellido"></p>
+    <p>Correo almacenado: <j id="datoCorreo"></j></p>   
+    <P>Fecha almacenada: <j id="datoFnacimiento"></j> </P>    
+        <p>
+            <button onclick="cargarData()"> Cargar elementos</button>
+        </p>
+
+
+</body>
+</html>
