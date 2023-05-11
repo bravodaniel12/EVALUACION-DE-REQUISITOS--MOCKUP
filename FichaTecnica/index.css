@@ -1,0 +1,9 @@
+body{
+    padding: 10px;
+    background-color: lightgray;
+    text-align: center;
+    align-items: baseline;
+}
+a{
+    text-decoration: none;
+}

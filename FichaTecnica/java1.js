@@ -11,11 +11,10 @@ const j = document.querySelector("#dato10")
 const k = document.querySelector("#dato11")
 const l = document.querySelector("#dato12")
 
+ const link = document.querySelector('a[href="fichaT1.html"]'); 
 
-function almacenarData(){
-let uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve,
- diez, once, doce 
-
+function getFicha(){
+    let uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, once, doce 
 uno = document.getElementById("nom_producto").value
 dos = document.getElementById("linea").value
 tres = document.getElementById("versiones").value
@@ -30,18 +29,19 @@ once = document.getElementById("requerimientos").value
 doce = document.getElementById("cliente").value
 
 //almacenamiento local con localstorege
-localStorage.setItem("nom_product",uno);
-localStorage.setItem("linea",dos);
-localStorage.setItem("versiones",tres);
-localStorage.setItem("version",cuatro);
-localStorage.setItem("nom_product",cinco);
-localStorage.setItem("linea",seis);
-localStorage.setItem("versiones",siete);
-localStorage.setItem("version",ocho);
-localStorage.setItem("nom_product",nueve);
-localStorage.setItem("linea",diez);
-localStorage.setItem("versiones",once);
-localStorage.setItem("version",doce);
+localStorage.setItem("Nombre del Producto",uno);
+localStorage.setItem("Nombre del cliente",dos);
+localStorage.setItem("Numero de Producto",tres);
+localStorage.setItem("Version de Producto",cuatro);
+localStorage.setItem("Descripcion General",cinco);
+localStorage.setItem("Tipo de Arquitectura",seis);
+localStorage.setItem("Requerimiento físico",siete);
+localStorage.setItem("Requerimiento lógico",ocho);
+localStorage.setItem("Recomendaciones sistema",nueve);
+localStorage.setItem("Requerimiento sistema",diez);
+localStorage.setItem("Funciones adicionales",once);
+localStorage.setItem("Caracteristicas cliente",doce);
+
 //limpiando los campos o inputs
 document.getElementById("nom_producto").value = "";
 document.getElementById("linea").value = "";
@@ -56,12 +56,13 @@ document.getElementById("requerimiento").value = "";
 document.getElementById("requerimientos").value = "";
 document.getElementById("cliente").value = "";
 }
-function cargarData(){
+
+function getcargar(){
 let uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez, once, doce 
 uno = localStorage.getItem("Nombre del Producto");
 dos = localStorage.getItem("Nombre del cliente");
 tres = localStorage.getItem("Numero de Producto");
-cuatro = localStorage.getItem("Numero de Producto");
+cuatro = localStorage.getItem("Version de Producto");
 cinco = localStorage.getItem("Descripcion General");
 seis = localStorage.getItem("Tipo de Arquitectura");
 siete = localStorage.getItem("Requerimiento físico");
@@ -70,9 +71,9 @@ nueve = localStorage.getItem("Recomendaciones sistema");
 diez = localStorage.getItem("Requerimiento sistema");
 once = localStorage.getItem("Funciones adicionales");
 doce = localStorage.getItem("Caracteristicas cliente");
-}
-//mostar datos almacenados
-a.innerHTML = uno ;
+
+//mostrar datos almacenados
+a.innerHTML = uno;
 b.innerHTML = dos;
 c.innerHTML = tres;
 d.innerHTML = cuatro;
@@ -84,4 +85,4 @@ i.innerHTML = nueve;
 j.innerHTML = diez;
 k.innerHTML = once;
 l.innerHTML = doce;
-
+}
