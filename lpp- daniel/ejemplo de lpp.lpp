@@ -1,0 +1,21 @@
+Una empresa está realizando un aumento del 15% al sueldo base de sus trabajadores,
+escriba un algoritmo que solicite el nombre de un trabajador y su sueldo base, a
+continuación, el algoritmo debe calcular el aumento y el valor final a pagar al trabajador.
+
+entero aumento,valorF,base
+cadena [30] nombre
+inicio
+escriba " cual es tu nombre "
+lea nombre
+llamar nueva_linea
+escriba " deposite su salario base "  
+lea base
+aumento <- (base*0.15)
+valorF <- (aumento+base)
+llamar nueva_linea
+escriba " Señor " ,nombre
+llamar nueva_linea
+escriba " el aumento de su sueldo es ",aumento
+llamar nueva_linea
+escriba " el total de su pago debe ser de " ,valorF
+fin

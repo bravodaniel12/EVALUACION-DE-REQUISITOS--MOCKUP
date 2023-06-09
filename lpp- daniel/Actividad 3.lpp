@@ -1,0 +1,22 @@
+
+Escriba un algoritmo que le permita ingresar dos números enteros por el teclado,
+posteriormente calcule la suma, la resta y la multiplicación de los dos números e imprima
+los números leídos y los resultados de las tres operaciones.
+
+entero suma,resta,multiplicacion,n1,n2
+inicio
+escriba " Ingrese primer dato "
+lea n1
+llamar nueva_linea
+escriba " Ingrese segundo dato "
+lea n2
+suma <- (n1+n2)
+resta <- (n1-n2)
+multiplicacion <- (n1*n2)
+llamar nueva_linea
+escriba " la suma de ",n1,"+",n2," es = ",suma
+llamar nueva_linea
+escriba " la resta de ",n1,"-",n2," es = ",resta
+llamar nueva_linea
+escriba " la suma de ",n1,"*",n2," es = ",multiplicacion
+fin
