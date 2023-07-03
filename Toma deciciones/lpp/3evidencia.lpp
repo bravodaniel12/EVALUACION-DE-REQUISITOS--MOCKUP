@@ -1,0 +1,11 @@
+entero n1
+inicio
+escriba " ingrese su calificacion del uno al 10 "
+lea n1
+llamar nueva_linea
+	si n1>7 entonces
+	escriba " APROBO " 
+	sino
+	escriba " NO APROBO"
+	fin si
+	fin

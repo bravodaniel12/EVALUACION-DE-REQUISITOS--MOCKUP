@@ -1,0 +1,22 @@
+entero n1,n2,n3
+inicio
+escriba "ingrese primer numero "
+lea n1
+llamar nueva_linea
+escriba "ingrese segundo numero "
+lea n2
+llamar nueva_linea
+escriba "ingrese tercer numero "
+lea n3
+llamar nueva_linea
+	si n1 > n2 entonces
+	escriba "el numero mayor es",n1
+	fin si
+		si n2 > n3 entonces
+		escriba " wl nunmero mayor es",n2
+		fin si
+			si n3 >n1 entonces 
+			escriba "el numero mayor es",n3
+			fin si
+fin
+
