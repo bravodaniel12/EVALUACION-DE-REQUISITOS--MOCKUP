@@ -1,4 +1,4 @@
-real DescuentoSueldo
+
     real sueldo, descuento, sueldoTotal 
 inicio
     escriba " Ingrese el sueldo inicial del trabajador: "
