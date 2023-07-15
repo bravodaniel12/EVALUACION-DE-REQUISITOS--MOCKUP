@@ -13,3 +13,4 @@ inicio
 	llamar nueva_linea
 	escriba " el sueldo semanal es de ",sueldoS
 fin
+
