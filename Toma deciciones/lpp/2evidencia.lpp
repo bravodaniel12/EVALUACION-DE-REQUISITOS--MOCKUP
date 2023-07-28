@@ -1,22 +1,19 @@
-entero n1,n2,n3
-inicio
-escriba "ingrese primer numero "
-lea n1
-llamar nueva_linea
-escriba "ingrese segundo numero "
-lea n2
-llamar nueva_linea
-escriba "ingrese tercer numero "
-lea n3
-llamar nueva_linea
-	si n1 > n2 entonces
-	escriba "el numero mayor es",n1
-	fin si
-		si n2 > n3 entonces
-		escriba " wl nunmero mayor es",n2
-		fin si
-			si n3 >n1 entonces 
-			escriba "el numero mayor es",n3
-			fin si
-fin
-
+Entero num1, num2, num3, menor
+Inicio
+Escriba "Ingrese el primer numero entero: "
+Lea num1
+Escriba "Ingrese el segundo numero entero: "
+Lea num2
+Escriba "Ingrese el tercer numero entero: "
+Lea num3
+Si num1 < menor Entonces
+menor <- num1  
+Fin Si
+Si num2 < menor Entonces
+menor <- num2
+Fin Si
+Si num3 < menor Entonces
+menor <- num3
+Fin Si
+Escriba "El numero entero menor es: ", menor
+Fin

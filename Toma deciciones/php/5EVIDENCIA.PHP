@@ -8,9 +8,9 @@ $tarifaDiurna = 10;
 $tarifaNocturna = 15;
 
 
-if ($turno == 'diurno') {
+if ($turno.lower() == 'diurno') {
     $valorPagar = $tarifaDiurna * $horasTrabajadas;
-} elseif ($turno == 'nocturno') {
+} elseif ($turno.lower() == 'nocturno') {
     $valorPagar = $tarifaNocturna * $horasTrabajadas;
 } else {
     $valorPagar = 0; 

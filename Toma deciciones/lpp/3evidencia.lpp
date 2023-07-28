@@ -3,9 +3,16 @@ inicio
 escriba " ingrese su calificacion del uno al 10 "
 lea n1
 llamar nueva_linea
-	si n1>7 entonces
-	escriba " APROBO " 
-	sino
-	escriba " NO APROBO"
+	si n1 >=11 entonces
+	escriba " tu nota sobrepasa la nota normal"
 	fin si
-	fin
+	si n1=0 entonces
+	escriba " tu nota no existe"
+	fin si
+	si n1 <7 entonces 
+	escriba " no aprobaste" 
+	sino si n1 <11 entonces
+	escriba " aprobaste"
+	fin si
+fin si
+fin

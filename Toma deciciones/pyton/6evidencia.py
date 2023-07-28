@@ -1,6 +1,6 @@
 def calcular_sueldo(horas_trabajadas):
     sueldo_base = 20  # Pago por hora si trabaja 40 horas o menos
-    horas_base = 40   # Número de horas base
+    horas_base = 40  # Número de horas base
 
     if horas_trabajadas <= horas_base:
         sueldo_semanal = horas_trabajadas * sueldo_base
@@ -10,7 +10,7 @@ def calcular_sueldo(horas_trabajadas):
 
     return sueldo_semanal
 
-# Ejemplo de uso:
+""" funcion de uso: """
 horas_trabajadas = int(input("Ingrese el número de horas trabajadas: "))
 sueldo = calcular_sueldo(horas_trabajadas)
 print("El sueldo semanal del trabajador es: $", sueldo)

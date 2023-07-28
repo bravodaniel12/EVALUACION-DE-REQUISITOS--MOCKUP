@@ -1,11 +1,10 @@
-n1 = int(input("ingrese primer numero "))
-n2 = int(input("ingrese primer numero "))
-n3 = int(input("ingrese primer numero ")) 
-
-if n1>n2:
-    print("el numero MAYOR es:",n1)
-if n2>n3:
-    print("el numero MAYOR es:",n2)
-if n3>n1:
-    print("el numero MAYOR es:",n3)
-    
+num1 = int(input("Ingrese el primer número: "))
+num2 = int(input("Ingrese el segundo número: "))
+num3 = int(input("Ingrese el tercer número: "))
+if num1 <= num2 and num1 <= num3:
+    menor = num1
+elif num2 <= num1 and num2 <= num3:
+    menor = num2
+else:
+    menor = num3
+print("El número menor es:", menor)

@@ -1,3 +1,19 @@
 7. Suponiendo que pi = 3.1416. Escribe un programa que pida al usuario que introduzca el
-radio, y presente por pantalla el cálculo del perímetro de la circunferencia (2*pi*r), el área
-del círculo (pi*r2 ), y el volumen de la esfera (V = 4*pi*r3 /3).
+radio, y presente por pantalla el cï¿½lculo del perï¿½metro de la circunferencia (2*pi*r), el ï¿½rea
+del cï¿½rculo (pi*r2 ), y el volumen de la esfera (V = 4*pi*r3 /3).
+
+
+real pi, radio, perimetro, area, volumen
+inicio
+escriba "introduzca el radio del circulo"
+lea radio
+pi <- 3.1416
+perimetro <- (2*pi*radio)
+area <- (pi*radio*radio)
+volumen <- (4*pi*radio*radio*radio/3)
+escriba "perimetro: 2 * ",pi, " * ", radio, perimetro
+llamar nueva_linea
+escriba "area:",pi, " * ",radio, " elevado al cuadrado ", area
+llamar nueva_linea
+escriba " volumen: 4 * ", pi, " * ",radio," elevado al cubo / 3 ", volumen
+fin
