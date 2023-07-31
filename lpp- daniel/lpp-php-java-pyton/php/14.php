@@ -3,22 +3,22 @@
 <h1>Análisis de suelo</h1>
 
 <h3>Ingrese PH (Acidez del suelo)</h3>
-<input type="float" name="acidez">
+<input step="any" type="number" name="acidez">
 <h3>Ingrese la Materia orgánica</h3>
-<input type="float" name="materia">
+<input step="any" type="number" name="materia">
 <h3>Ingrese el Fosforo</h3>
-<input type="float" name="fosforo">
+<input step="any" type="float" name="fosforo">
 <h3>Ingrese el Calcio</h3>
-<input type="float" name="calcio"><br>
+<input step="any" type="float" name="calcio"><br>
 <h3>Ingrese el Magnesio</h3>
-<input type="float" name="magnesio"><br>
+<input step="any" type="float" name="magnesio"><br>
 <h3>Ingrese el Aluminio</h3>
-<input type="float" name="aluminio"><br><br>
+<input step="any" type="float" name="aluminio"><br><br>
 <button type="submit">Enviar</button>
 <form>
     
 <?php
-$acidez = $_POST['acidez'];
+$acidez = floatval($_POST['acidez']);
 $materia = $_POST['materia'];
 $fosforo = $_POST['fosforo'];
 $calcio = $_POST['calcio'];
