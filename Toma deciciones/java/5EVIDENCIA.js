@@ -2,6 +2,7 @@
 var turno = prompt("Ingrese el turno de trabajo (dia/noche):");
 var horasTrabajadas = parseInt(prompt("Ingrese el número de horas trabajadas:"));
 
+turno = turno.toLowerCase()
 var tarifaHora = 0;
 
 if (turno === "dia") {

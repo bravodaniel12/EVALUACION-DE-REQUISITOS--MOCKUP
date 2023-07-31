@@ -3,16 +3,17 @@
 $turno = readline(prompt: "ingrese su horario de trabajo: ");
 $horasTrabajadas = intval(readline(prompt: "ingrese las horas trabajadas: "));
 
-
+$turno = strtolower($turno);
 $tarifaDiurna = 10;
 $tarifaNocturna = 15;
 
 
-if ($turno.lower() == 'diurno') {
+if ($turno == 'diurno') {
     $valorPagar = $tarifaDiurna * $horasTrabajadas;
-} elseif ($turno.lower() == 'nocturno') {
+} elseif ($turno== 'nocturno') {
     $valorPagar = $tarifaNocturna * $horasTrabajadas;
 } else {
+    echo " su funcion no existe"; <br>
     $valorPagar = 0; 
 }
 

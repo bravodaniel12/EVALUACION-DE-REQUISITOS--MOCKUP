@@ -2,9 +2,9 @@ def calcular_jornal(turno, horas_trabajadas):
     tarifa_diurna = 10
     tarifa_nocturna = 15
 
-    if turno == "diurno":
+    if turno.lower() == "diurno":
         valor_a_pagar = tarifa_diurna * horas_trabajadas
-    elif turno == "noche":
+    elif turno.lower() == "noche":
         valor_a_pagar = tarifa_nocturna * horas_trabajadas
     else:
         valor_a_pagar = 0

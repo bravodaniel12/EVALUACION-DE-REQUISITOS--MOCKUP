@@ -1,6 +1,22 @@
+<form action="#" method="post">
+
+<h1>Análisis de suelo</h1>
+
+<h3>Ingrese PH (Acidez del suelo)</h3>
+<input type="float" name="acidez">
+<h3>Ingrese la Materia orgánica</h3>
+<input type="float" name="materia">
+<h3>Ingrese el Fosforo</h3>
+<input type="float" name="fosforo">
+<h3>Ingrese el Calcio</h3>
+<input type="float" name="calcio"><br>
+<h3>Ingrese el Magnesio</h3>
+<input type="float" name="magnesio"><br>
+<h3>Ingrese el Aluminio</h3>
 <input type="float" name="aluminio"><br><br>
 <button type="submit">Enviar</button>
 <form>
+    
 <?php
 $acidez = $_POST['acidez'];
 $materia = $_POST['materia'];

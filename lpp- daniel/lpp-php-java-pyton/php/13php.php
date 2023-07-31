@@ -8,6 +8,7 @@
 
 
 <?php
+
     $nombre = $_POST["nombre"];
     $genero = $_POST["genero"];
     $salario = $_POST["salario"];
