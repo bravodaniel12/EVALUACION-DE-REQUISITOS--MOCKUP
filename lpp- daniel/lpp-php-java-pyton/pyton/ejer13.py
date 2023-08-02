@@ -17,3 +17,4 @@ if(genero == "Mujer"):
         print('Hola',nombre, 'su salario basico es de ',salario,'pero con la bonificacion del 20% su salario sera de',bonificacion20)
     elif(tiempo <= 6):
          print('Hola',nombre, 'su salario basico es de ',salario,'pero con la bonificacion del 15% su salario sera de',bonificacion15)
+if( sa)

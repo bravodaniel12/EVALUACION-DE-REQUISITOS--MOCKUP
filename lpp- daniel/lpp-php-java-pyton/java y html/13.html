@@ -8,16 +8,15 @@
     <script src="13.js"></script>
 </head>
 <body>
-    <ul>
-        <input type="text" id="nombre" placeholder="Ingrese su nombre">
-        <input type="text" id="genero" placeholder="Ingrese su genero">
-        <input type="number" id="sueldob" placeholder="Ingrese su sueldo base:">
-        <input type="number" id="tiempo" placeholder="Ingrese el tiempo que lleva en la empresa:">
-        <button onclick="pow()">Enviar</button>
-    </ul>
-
-    <ul>
-        <span id="res"></span>
-    </ul>
+    <h3>Ingrese su nombre</h3>
+    <input type="text"  id="nombre">
+    <h3>Ingrese su genero (1 = masculino o 2 = femenino)</h3>
+    <input type="text"  id="genero">
+    <h3>Ingrese su salario básico</h3>
+    <input step="any" type="number" id="salario">
+    <h3>Ingrese los años trabajados</h3>
+    <input step="any" type="number" id="tiempo"><br>
+    <button type="submit" onclick="calcular()">Enviar</button>
+    <p id="mensaje"></p> 
 </body>
 </html>

@@ -1,30 +1,33 @@
+function calcular() {
+  let nombre,genero,salario,tiempo,aumento20,aumento15
 
-function pow() {
-    let nombre, genero, sueldo, tiempo, aumen15, aumen20
-    
-    nombre = parseInt(document.getElementById("nombre").value)
-    genero = parseInt(document.getElementById("genero").value)
-    sueldo = parseInt(document.getElementById("sueldob").value)
-    tiempo = parseInt(document.getElementById("tiempo").value)
-    
-    aumen15 = sueldo*0.15+sueldo
-  aumen20= sueldo*0.20+sueldo
+  nombre = document.getElementById("nombre").value
+  genero = document.getElementById("genero").value
+  salario = parseFloat(document.getElementById("salario").value)
+  tiempo = parseFloat(document.getElementById("tiempo").value)
+  mensaje = document.getElementById("mensaje");
 
-    if(genero=="masculino" && tiempo > 6){
-        mensajes = document.getElementById("res");
-        mensajes.innerHTML = "su bonificacion es de un 20% su sueldo base ahora queda en: "+aumen20
-      }if(genero=="masculino" && tiempo <= 6){
-        mensaje = document.getElementById("res");
-        mensaje.innerHTML = "su bonificacion es de un 15% de su sueldo base ahora queda en: "+aumen15
-      }
+  aumento20 = (salario * 0.20);
+  bonificaicon20 = salario + aumento20;
+  aumento15 = (salario * 0.15);
+  bonificaicon15 = salario + aumento15;
+  
+  genero = genero.toLowerCase();
 
-      if(genero=="femenino" && tiempo > 5){
-        mensajes = document.getElementById("res");
-        mensajes.innerHTML = "su bonificacion es de un 20% su sueldo base ahora queda en: "+aumen20
-      }if(genero=="femenino" && tiempo <= 5){
-        mensaje = document.getElementById("res");
-        mensaje.innerHTML = "su bonificacion es de un 15% de su sueldo base ahora queda en: "+aumen15
-      }
-
+  if(genero == "femenino" || genero == "2"){
+    if(tiempo > 5)   
+    mensaje.innerHTML = "Hola "+nombre+" su salario basico es de "+salario+" y su salario con el aumento es de "+bonificaicon20
+    if(tiempo <= 5)
+    mensaje.innerHTML = "Hola "+nombre+" su salario basico es de "+salario+" y su salario con el aumento es de "+bonificaicon15
     }
 
+  if(genero == "masculino" || genero == "1"){
+      if(tiempo > 6)
+      mensaje.innerHTML = "Hola "+nombre+" su salario basico es de "+salario+" y su salario con el aumento es de "+bonificaicon20
+      if(tiempo <= 6)
+      mensaje.innerHTML = "Hola "+nombre+" su salario basico es de "+salario+" y su salario con el aumento es de "+bonificaicon15
+    }
+    if (genero != "femenino" && genero != "2" && genero != "masculino" && genero != "1") {
+      mensaje.innerHTML = "El genero ingresado no es valido"
+}
+}

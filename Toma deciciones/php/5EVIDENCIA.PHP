@@ -13,7 +13,7 @@ if ($turno == 'diurno') {
 } elseif ($turno== 'nocturno') {
     $valorPagar = $tarifaNocturna * $horasTrabajadas;
 } else {
-    echo " su funcion no existe"; <br>
+    echo " su funcion no existe"; 
     $valorPagar = 0; 
 }
 
