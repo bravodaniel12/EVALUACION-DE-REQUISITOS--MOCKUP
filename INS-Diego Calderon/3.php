@@ -17,7 +17,7 @@ function ordenarArray($arr) {
 }
 
 // uso
-$miArray = array(4, 2, 7, 1, 9, 3);
+$miArray = array(42, 2, 7, 10, 9, 3);
 $miArrayOrdenado = ordenarArray($miArray);
 
 echo "Array original: " . implode(", ", $miArray) . "<br>";
