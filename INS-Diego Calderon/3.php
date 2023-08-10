@@ -1,23 +1,25 @@
-
 <?php
+function ordenarArray($arr) {
+    $n = count($arr);
 
-function ordenarArray($arreglo) {
-    $longitud = count($arreglo);
-    for ($i = 0; $i < $longitud; $i++) {
-        for ($j = 0; $j < $longitud - 1; $j++) {
-            if ($arreglo[$j] > $arreglo[$j + 1]) {
-                $temporal = $arreglo[$j];
-                $arreglo[$j] = $arreglo[$j + 1];
-                $arreglo[$j + 1] = $temporal;
+    for ($i = 0; $i < $n - 1; $i++) {
+        for ($j = 0; $j < $n - $i - 1; $j++) {
+            if ($arr[$j] > $arr[$j + 1]) {
+                // Intercambiar los elementos si están en el orden incorrecto
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$j + 1];
+                $arr[$j + 1] = $temp;
             }
         }
     }
+
+    return $arr;
 }
 
-$Arreglo = [5, 1, 80, 10, 7, 66, 100];
-echo "Antes de ordenar: ";
-print_r($Arreglo);
-# Lo ordenamos
-ordenarArray($arreglo);
-echo "Después de ordenar: ";
-print_r($arreglo);
+// Ejemplo de uso
+$miArray = array(4, 2, 7, 1, 9, 3);
+$miArrayOrdenado = ordenarArray($miArray);
+
+echo "Array original: " . implode(", ", $miArray) . "<br>";
+echo "Array ordenado: " . implode(", ", $miArrayOrdenado);
+?>
