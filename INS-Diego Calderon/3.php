@@ -16,7 +16,7 @@ function ordenarArray($arr) {
     return $arr;
 }
 
-// Ejemplo de uso
+// uso
 $miArray = array(4, 2, 7, 1, 9, 3);
 $miArrayOrdenado = ordenarArray($miArray);
 
