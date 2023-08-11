@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnóstico de Anemia</title>
+</head>
+<body>
+    <h1>Diagnóstico de Anemia</h1>
+    <form id="anemiaForm">
+        <label for="edad">Edad:</label>
+        <input type="texto" id="edad" name="edad" required>
+        <br>
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+        </select>
+        <select id="meses" name="meses/años" required>
+            <option value="meses">Meses</option>
+            <option value="meses">Anos</option>
+        </select>
+        <br>
+        <label for="hemoglobina">Nivel de Hemoglobina (g%):</label>
+        <input type="number" id="hemoglobina" name="hemoglobina" step="0.1" required>
+        <br>
+        <button type="button" onclick="calcularDiagnostico()">Calcular Diagnóstico</button>
+    </form>
+    <br>
+    <div id="resultado"></div>
+
+    <script src="prueba.js"></script>
+</body>
+</html>
