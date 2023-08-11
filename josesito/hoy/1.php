@@ -1,69 +1,39 @@
+<form action="#" method="POST">
+    <select name="candidato" id="candidato">
+        <option value="">Seleccionar...</option>
+        <option value="0">Candidato 0</option>
+        <option value="1">Candidato 1</option>
+        <option value="2">Candidato 2</option>
+        <option value="3">Candidato 3</option>
+    </select>
+    <button type="submit">Votar</button>
+</form>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Votaciónes a la alcaldia</title>
-</head>
-<body>
-    <h1> Elecciones de candidatos a la alcaldia - pitalito</h1>
+<form action="#" method="POST">
+    <input type="hidden" name="reiniciarVotos">
+    <button type="submit">Reiniciar votos</button>
+</form>
 
-    <h3>Candidatos :</h3>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <label for="Ficha candidato #1"> Candidato #1: Sergio Mauricio Zúñiga</label>
-        <input type="number" id="Candidato1" name="Candidato1"><br><br>
-        <label for="Ficha candidato #2">Candidato #2: Yider Luna Joven</label>
-        <input type="number" id="Candidato2" name="Candidato2"><br><br>
-        <label for="Ficha candidato #3">Candidato #3: Franklin Alexander Vega</label>
-        <input type="number" id="Candidato3" name="Candidato3"><br><br>
-        <label for="voto_blanco">#4 Voto en blanco</label>
-        <input type="number" id="voto_blanco" name="voto_blanco"><br><br>
-        <input type="submit" name="enviar" value="Enviar">
-    </form>
 
-    <h2>Resultados:</h2>
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $candidato1 = $_POST["Candidato1"];
-            $candidato2 = $_POST["Candidato2"];
-            $candidato3 = $_POST["Candidato3"];
-            $voto_blanco = $_POST["voto_blanco"];
+<?php
 
-            $total_votos = $candidato1 + $candidato2 + $candidato3 + $voto_blanco;
+session_start();
+if (isset($_POST['candidato'])) {
+    $candidato = intval($_POST['candidato']);
+    if (!isset($_SESSION['candidatos'])) {
+        $_SESSION['candidatos'] = [0, 0, 0, 0];
+    }
+    $_SESSION['candidatos'][$candidato] += 1;
+    var_dump($_SESSION['candidatos']);
 
-            echo "<strong> <p>El total de participantes fue de " . $total_votos . "</p></strong>";
+    $candidato0 = $_SESSION['candidatos'][0];
+    $candidato1 = $_SESSION['candidatos'][1];
+    $candidato2 = $_SESSION['candidatos'][2];
+    $candidato3 = $_SESSION['candidatos'][3];
+    
+}
 
-            if ($total_votos > 0) {
-                $candidatos = array("Sergio Mauricio Zúñiga", "Yider Luna Joven", "Franklin Alexander Vega", "Voto en blanco");
-                $votos = array($candidato1, $candidato2, $candidato3, $voto_blanco);
-
-                $max_votos = max($votos);
-                $ganadores = array();
-                $empates = array();
-
-                for ($i = 0; $i < count($votos); $i++) {
-                    if ($votos[$i] == $max_votos) {
-                        $ganadores[] = $i;
-                    } else {
-                        $empates[] = $i;
-                    }
-                }
-
-                if (count($ganadores) == 1) {
-                    $ganador_index = $ganadores[0];
-                    echo "<p>El ganador es el Candidato " . ($ganador_index + 1) . "( " . $candidatos[$ganador_index] . ")</p>";
-                } else {
-                    echo "<p>Hay empate entre los siguientes candidatos:</p>";
-                    foreach ($ganadores as $index) {
-                        echo "<p>Candidato " . ($index + 1) . " (" . $candidatos[$index] . ")</p>";
-                    }
-                }
-                        else {
-                            foreach ($votos as $index => $candidato) {
-                                echo "<p>El Candidato " . ($index + 1) . " (" . $candidatos[$index] . ") obtuvo " . $candidato . " votos</p>";
-                     } 
-                }
-                echo "<p>No se registraron votos</p>";
-            }
-    ?>
-</body>
-</html>
+if (isset($_POST['reiniciarVotos'])) {
+    $_SESSION['candidatos'] = [0, 0, 0, 0];
+    echo "Votos reiniciados";
+}
