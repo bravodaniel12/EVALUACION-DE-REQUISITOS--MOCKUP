@@ -13,6 +13,8 @@ if ($correo == "fund@gmail.com" && $contraseña == "123456"){
     echo "Bienvenidos a fundamentos de la programacion";
 }elseif ($correo != "fund@gmail.com" && $contraseña != "123456") {
     echo "Error en los datos ingresados"; 
+}else {
+    echo " falta informacion";
 }
 
 ?>
