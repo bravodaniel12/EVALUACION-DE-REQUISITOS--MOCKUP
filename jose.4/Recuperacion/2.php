@@ -32,7 +32,7 @@
     <title>Resultado del Diagnóstico de Anemia</title>
 </head>
 <body>
-    <h1>Resultado del Diagnóstico de Anemia</h1>
+    <h3>Resultado del Diagnóstico de Anemia</h3>
 
     <?php
     $sexo = $_POST['sexo'];
