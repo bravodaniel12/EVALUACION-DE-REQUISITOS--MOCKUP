@@ -1,39 +1,67 @@
-<form action="#" method="POST">
-    <select name="candidato" id="candidato">
-        <option value="">Seleccionar...</option>
-        <option value="0">Candidato 0</option>
-        <option value="1">Candidato 1</option>
-        <option value="2">Candidato 2</option>
-        <option value="3">Candidato 3</option>
-    </select>
-    <button type="submit">Votar</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Elecciones de Alcaldes</title>
+</head>
+<body>
 
-<form action="#" method="POST">
-    <input type="hidden" name="reiniciarVotos">
-    <button type="submit">Reiniciar votos</button>
-</form>
+<h2>Elecciones de Alcaldes de Pitalito</h2>
 
+<span> Ingrese en cada casilla el numero de votos!!</span> 
+<br><br>
+<form method="post" action="">
+    <label for="voto_sergio">Sergio Mauricio Zúñiga:</label>
+    <input type="number" id="voto_sergio" name="votos[Sergio Mauricio Zúñiga]" min="0"><br>
+
+    <label for="voto_yider">Yider Luna Joven:</label>
+    <input type="number" id="voto_yider" name="votos[Yider Luna Joven]" min="0"><br>
+
+    <label for="voto_franklin">Franklin Alexander Vega:</label>
+    <input type="number" id="voto_franklin" name="votos[Franklin Alexander Vega]" min="0"><br>
+
+    <label for="voto_blanco">Voto en blanco:</label>
+    <input type="number" id="voto_blanco" name="votos[Voto en blanco]" min="0"><br>
+
+    <br>
+    <input type="submit" name="votar" value="Votar">
+</form>
 
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["votos"])) {
+    $candidatos = [
+        "Sergio Mauricio Zúñiga",
+        "Yider Luna Joven",
+        "Franklin Alexander Vega",
+        "Voto en blanco"
+    ];
 
-session_start();
-if (isset($_POST['candidato'])) {
-    $candidato = intval($_POST['candidato']);
-    if (!isset($_SESSION['candidatos'])) {
-        $_SESSION['candidatos'] = [0, 0, 0, 0];
+    $votos = $_POST["votos"];
+
+    // Validar votos no negativos
+    foreach ($votos as $candidato => $cantidad) {
+        $votos[$candidato] = max(0, (int)$cantidad);
     }
-    $_SESSION['candidatos'][$candidato] += 1;
-    var_dump($_SESSION['candidatos']);
 
-    $candidato0 = $_SESSION['candidatos'][0];
-    $candidato1 = $_SESSION['candidatos'][1];
-    $candidato2 = $_SESSION['candidatos'][2];
-    $candidato3 = $_SESSION['candidatos'][3];
-    
-}
+    $totalVotos = array_sum($votos);
+    $maxVotos = max($votos);
+    $ganadores = array_keys($votos, $maxVotos);
 
-if (isset($_POST['reiniciarVotos'])) {
-    $_SESSION['candidatos'] = [0, 0, 0, 0];
-    echo "Votos reiniciados";
+    echo "<h3>Resultados:</h3>";
+    foreach ($candidatos as $candidato) {
+        $votosCandidato = $votos[$candidato];
+        echo "$candidato: $votosCandidato votos<br>";
+    }
+
+    echo "<h3>Resultado Final:</h3>";
+    if (count($ganadores) > 1) {
+        echo "Empate entre: " . implode(", ", $ganadores);
+    } else {
+        echo "Ganador: " . $ganadores[0];
+    }
+
+    echo "<h3>Total de Participantes: $totalVotos</h3>";
 }
+?>
+
+</body>
+</html>
