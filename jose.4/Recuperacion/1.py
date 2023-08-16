@@ -29,20 +29,24 @@ while True:
 
 # Solicitar precio, asegurarse de que sea un número positivo
 while True:
-    precio = float(input("Ingrese el precio del producto: "))
-    if precio > 0:
-        break
-    else:
-        print("Ingresa un precio válido (positivo). Inténtalo de nuevo.")
-
+    try:
+        precio = float(input("Ingrese el precio del producto: "))
+        if precio > 0:
+            break
+        else:
+            print("Ingresa un precio válido (positivo). Inténtalo de nuevo.")
+    except ValueError:
+        print("Ingresa un valor numérico válido.")
 # Solicitar cantidad, asegurarse de que no sea negativa
 while True:
-    cantidad = int(input("Ingrese la cantidad de productos: "))
-    if cantidad >= 0:
-        break
-    else:
-        print("Ingresa una cantidad válida (no negativa). Inténtalo de nuevo.")
-
+    try:
+        cantidad = int(input("Ingrese la cantidad de productos: "))
+        if cantidad >= 0:
+            break
+        else:
+            print("Ingresa una cantidad válida (no negativa). Inténtalo de nuevo.")
+    except ValueError:
+        print("Ingresa un valor numérico válido.")
 # Calcular total antes de aplicar descuento
 total = precio * cantidad
 
