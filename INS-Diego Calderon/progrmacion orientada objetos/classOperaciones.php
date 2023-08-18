@@ -19,4 +19,19 @@ public function suma(){
     
     return $this -> floatResultado;
 }
+public function resta(){
+      $this -> floatResultado = $this -> IntCantidadUno - $this -> IntCantidadDos;
+      
+      return $this -> floatResultado;
+  }
+  public function divicion(){
+      $this -> floatResultado = $this -> IntCantidadUno / $this -> IntCantidadDos;
+      
+      return $this -> floatResultado;
+  }
+  public function multiplicacion(){
+      $this -> floatResultado = $this -> IntCantidadUno * $this -> IntCantidadDos;
+      
+      return $this -> floatResultado;
+  }
 }
