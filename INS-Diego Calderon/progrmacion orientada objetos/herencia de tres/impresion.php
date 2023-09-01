@@ -4,7 +4,6 @@ require_once("classCliente.php");
 
 
 echo "<h1> Persona nueva para empleado </h1>";
-
 $objEmpleado = new Empleado(123,"Elpepe",18);
 $objEmpleado ->setPuestos("vendedor");
 echo $objEmpleado->getDatosPersonales();

@@ -6,24 +6,25 @@ class Mueble extends Producto {
     public $strMaterial;
     //METODOS
 
-    public function __construct(string $descripcion, float $precio, string $color, string $material)
+    public function __construct(string $descripcion, string $precio, string $color, string $material)
     {
         parent::__construct($descripcion, $precio);
 
         $this->strColor = $color;
-        $this->strMaterial = $material;
+        $this->strMaterial = $material; 
     }
 
-    function getInfoProducto(){
-        $arrayProducto = [
-            'producto'=>$this->strDescripcion,
-            'precio'=>$this->fltPrecio,
-            'stoc_minimo'=>$this->intStockMinimo,
-            'estado'=>$this->strStatus,
-            'color'=>$this->strColor,
-            'material'=>$this->strMaterial
-        ];
-        return $arrayProducto;
+     function getInfoProducto(){
+
+        $arrayProducto = "
+        Producto: {$this->strDescripcion}<br>
+          Precio: {$this->strPrecio}<br>
+          Stoc_minimo: {$this->intStockMinimo}<br>
+          Estado: {$this->strStatus}<br>
+          Color: {$this->strColor}<br>
+          Material: {$this->strMaterial}<br>
+          ";
+          return $arrayProducto;
     }
 
 

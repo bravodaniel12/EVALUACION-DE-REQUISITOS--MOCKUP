@@ -2,24 +2,24 @@
 class Producto{
     //PROPIEDADES
     public $strDescripcion;
-    public $fltPrecio;
+    public $strPrecio;
     protected $intStockMinimo = 10;
     protected $strStatus = "Activo";
 
     //METODOS
 
-    function __construct(string $descripcion, float $precio, ){
+    function __construct(string $descripcion, string $precio ){
         $this->strDescripcion = $descripcion;
-        $this->fltPrecio = $precio;
+        $this->strPrecio = $precio;
     }
 
-    function getInfoProducto(){
-        $arrayProducto = [
-          'producto'=>$this->strDescripcion,
-            'precio'=>$this->fltPrecio,
-            'stoc_minimo'=>$this->intStockMinimo,
-            'estado'=>$this->strStatus
-        ];
+    public function getInfoProducto(){
+        $arrayProducto = "
+          Producto: {$this->strDescripcion}<br>
+            Precio: {$this->strPrecio}<br>
+            Stock_minimo: {$this->intStockMinimo}<br>
+            Estado: {$this->strStatus}<br>
+            ";
         return $arrayProducto;
     }
 
